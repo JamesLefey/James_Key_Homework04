@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>James's Ramschackle Coding Quiz Event</title>
+    <link rel="stylesheet" href='style.css'>
+</head>
+
+
+
+<body>
+
+    <!-- The Title of the Page and the Countdown clock display in class = 'time' -->
+
+    <header>
+        <h1>Coding Quiz Challenge</h1>
+        <h2 class="time"></h2>
+    </header>
+    
+    <!-- This is the body of the questions for the quiz that display when the quiz is begun -->
+
+    <div class="questions">
+        <h3 id="qContent">Question Goes Here</h3>
+        <div id="aContent" class="answers">
+            <p class="answerButton" id="optionA" onclick="checkAnswer('A')">some answer text</p>
+            <p class="answerButton" id="optionB" onclick="checkAnswer('B')">some answer text</p>
+            <p class="answerButton" id="optionC" onclick="checkAnswer('C')">some answer text</p>
+            <p class="answerButton" id="optionD" onclick="checkAnswer('D')">some answer text</p>
+        </div>
+        
+        
+        <!-- This is where the page initially lands, and lands after the quiz.
+        It displays the number correct/incorrect and saved initials -->
+
+        <div class="scoreOverlay">
+            <div class="scorewrapper">
+            <p>Your Score</p>
+            <p>Correct:</p>
+            <h3 id="numberCorrect" >0</h3>
+            <p>Incorrect:</p>
+            <h3 id="numberWrong">0</h3>
+            </div>
+            <div class="highScore">
+                <h4>Place your Name on the Board of Champions</h4>
+                <!-- This form is where you can enter your name or initials -->
+            <form>
+                <input type="text" class="holdScore" placeholder="The Champion's Title" id="initials" value="JDK">
+                <button id="saveScore">Save Score</button>
+            </form>
+            <!-- class = 'displayHighScore ' -->
+            <div class="displayHighScore">
+                <h4>High Scores!</h4>
+                <ol class='test' id="highScores"></ol>
+                
+
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- This button beguns the quiz -->
+    <div class="start">
+        <button id="startBtn">Begin The JS Knowledge Challenge!</button>
+    </div>
+    
+    <script src='script.js'></script>
+</body>
+</html>
